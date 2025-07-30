@@ -17,5 +17,5 @@ test('Total no of links', async ({ page }) => {
     await page.waitForTimeout(1000);
   }
 
-  await browser.close();
+  await page.close();
 });
