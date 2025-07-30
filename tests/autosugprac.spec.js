@@ -20,11 +20,8 @@ test('auto suggestion practice', async ({ page }) => {
   console.log('Suggestions:');
   texts.forEach((t, i) => console.log(`${i + 1}: ${t}`));
 
-  // Click 3rd suggestion if exists
-  if (texts.length >= 3) {
-    await suggestions.nth(2).click(); // 3rd suggestion
-  }
+  
 
   await page.waitForTimeout(3000);
-  await browser.close();
+  await page.close();
 });
